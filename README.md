@@ -1,3 +1,6 @@
+This is the TCP/REDIS <B>server side</B> microservices from Brian Johnson tutorial on youtube. I would like to thanks Him for its tutorial on microservices. 
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
