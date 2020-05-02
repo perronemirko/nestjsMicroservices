@@ -1,0 +1,17 @@
+POST  http://127.0.0.1:6000/add HTTP/1.1
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1pcmtvODY3VVNFUjIiLCJpYXQiOjE1ODgxNzkyNDAsImV4cCI6MTU4ODE4Mjg0MH0.GVcuGdPvoPpUJ-DDfjUyJogS1XMktCgBrgAvldEJgJ4
+Content-Type: application/x-www-form-urlencoded
+
+data[]=[1,2]
+
+###
+GET http://localhost:6000/ HTTP/1.1
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1pcmtvODY3IiwiaWF0IjoxNTg4MTc4NDM4LCJleHAiOjE1ODgxODIwMzh9.ZZabBr9m8X1kNWQp0n7IYqpgUVUJwYuh2gA4yDlOr8c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1pcmtvODY3VVNFUjIiLCJpYXQiOjE1ODgxNzkyNDAsImV4cCI6MTU4ODE4Mjg0MH0.GVcuGdPvoPpUJ-DDfjUyJogS1XMktCgBrgAvldEJgJ4
+
+{
+    "title": "Call Jana",
+    "description": "Check if lol",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
