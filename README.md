@@ -1,5 +1,5 @@
 This is the TCP/REDIS/gRPC <B>server side microservices</B> from Brian Johnson tutorial on youtube. I would like to thanks Him for its tutorial on microservices.
-
+(Protobuf are like TypeScript definition file or a Graphql Schema)
 From git commit 2ca392e5c71f3d9080e58593eb746adc0a1fe590 on it will be implemented gRPC instead of TCP/REDIS
 
 <p align="center">

@@ -1,0 +1,18 @@
+syntax = "proto3";
+// IT is a Type Definition File
+package app;
+
+// Declare a service for each controller you have
+service AppController {
+    // Declare an rpc for each method this is called via gRPC
+    rpc Accumulate (NumberArray) returns (SumOfNumberArray);
+}
+
+// Declare the types userd above
+message NumberArray{
+    repeated double data = 1; // repeated means array declarations of type double named data 1 means that is the first argoument
+    // repeated double data2 = 2; // Possible second Argoument
+}
+message SumOfNumberArray{
+    double sum = 1;
+}

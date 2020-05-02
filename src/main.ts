@@ -2,6 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { Logger } from '@nestjs/common';
 import { Transport } from '@nestjs/microservices';
+import { join } from 'path';
 
 // Create a logger instance
 const logger = new Logger('Main');
@@ -29,13 +30,25 @@ const logger = new Logger('Main');
 
 ///// USING REDIS INSTEAD ///////
 //Create the microservice_options object 
+// const microserviceOptions = {
+//   transport: Transport.REDIS,
+//   options: {
+//     host:'127.0.0.1',
+//     port: 6379
+//   }
+// }
+
+//// USING GRPC PROTOBUF ////
 const microserviceOptions = {
-  transport: Transport.REDIS,
+  transport: Transport.GRPC,
   options: {
-    host:'127.0.0.1',
-    port: 6379
+    package:'app',
+    protoPath: join(__dirname, '../src/app.proto'),
   }
 }
+
+
+
 // This is serverside
 async function bootstrap() {
   // const app = await NestFactory.create(AppModule);
@@ -43,7 +56,7 @@ async function bootstrap() {
 
   const app = await NestFactory.createMicroservice(AppModule, microserviceOptions);
   await app.listen(()=>{
-    logger.log(`Microservice Redis is listening ... on ${microserviceOptions.options.host}:${microserviceOptions.options.port}`)
+    logger.log(`Microservice GRPC is listening ...`)
   });
 }
 bootstrap();
